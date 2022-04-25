@@ -1,0 +1,8 @@
+// creating action type
+export const ActionTypes={
+
+    SET_PRODUCTS :"SET_PRODUCTS",
+    SELECETED_PRODUCT:"SELECETED_PRODUCT",
+    REMOVE_SELECTED_PRODUCT:"REMOVE_SELECTED_PRODUCT"
+
+};
