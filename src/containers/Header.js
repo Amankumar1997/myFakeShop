@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header=()=>{
   return(
-    <div className='ui fixe menu'>
+    <div className='ui menu'>
       <div className='ui container center' >
         <h2>MyFake Shop</h2>
       </div>

@@ -5,10 +5,10 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductComponent from './ProductComponent'
 import {setProducts} from '../redux/actions/productAction'
-function ProductListing() {
+const ProductListing=()=> {
    // we need fetch our productwhich are availble in redux store
    // thats why we use slector
-  const products=useSelector((state)=>state.allProducts.products)
+   const products = useSelector((state) => state.allProducts.products);
   const dispatch=useDispatch();
   // here im creating afunction fecthing all the products
   const fetchProducts = async () => {

@@ -4,10 +4,12 @@ import { useSelector } from "react-redux";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
+//  ill use map for displaying a product
   const renderList = products.map((product) => {
     const { id, title, image, price, category } = product;
     return (
       <div className="four wide column" key={id}>
+        {/* jab bhi hum product pe click krenege ye link tag ki help se product details page par chla jayega */}
         <Link to={`/product/${id}`}>
           <div className="ui link cards">
             <div className="card">
