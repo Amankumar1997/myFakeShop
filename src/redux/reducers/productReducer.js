@@ -9,12 +9,13 @@ const initialState={
 }
                   //action ko destrure kr dnege  
 export const productReducer=(state=initialState,{type,payload})=>{
-switch(type)
-{
+  switch (type) {
     case ActionTypes.SET_PRODUCTS:
-        return {...state,products:payload}
-        default:
-            return state
+      return { ...state, products: payload };
+    case ActionTypes.FETCH_PRODUCTS:
+      return { ...state, products: payload };
+    default:
+      return state;
         
 }
 }

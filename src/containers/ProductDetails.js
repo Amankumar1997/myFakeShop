@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
-import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
-import {selectedProduct,removeSelectedProduct} from "../redux/actions/productAction"
+import {selectedProduct,removeSelectedProduct}from '../redux/actions/productAction'
 
 
 
@@ -14,6 +14,7 @@ const ProductDetails=()=> {
   const {productId}=useParams();
   const dispatch=useDispatch();
   console.log(product);
+
   const fetchProductDetail=async(id)=>{
    const response= await axios
    .get(`https://fakestoreapi.com/products/${id}`)
@@ -30,7 +31,7 @@ const ProductDetails=()=> {
     return () => {
       dispatch(removeSelectedProduct());
     };
-  },[productId])
+  },[])
   return (
     <div className="ui grid container">
       {Object.keys(product).length === 0 ? (
